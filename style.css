@@ -1,0 +1,360 @@
+@font-face {
+  font-family: Futura;
+  src: url(./Futura-Bold.ttf);
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(./Gilroy-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+*::selection {
+  color: white;
+  background-color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+#cursor {
+  height: 30vh;
+  width: 15vw;
+  background-color: #fe7700f7;
+  border-radius: 50%;
+  opacity: 0.2;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+#nav {
+  z-index: 99;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#nav #nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  padding: 10px 20px;
+}
+
+#nav #nav-part2 #links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 4vw;
+}
+
+#nav #nav-part2 #links a:hover {
+  color: rgb(150, 147, 147);
+  transition: 0.2s ease;
+}
+#nav svg {
+  scale: 0.8;
+}
+
+#nav #nav-part1 svg {
+  height: 100px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #f7f7f799;
+}
+#icons {
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #f7f7f799;
+}
+
+#nav i {
+  cursor: pointer;
+  font-size: 18px;
+  margin: 0 20px;
+}
+#page1 {
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 35vh;
+  padding-inline: 2vw;
+  position: relative;
+  background-color: #f7f7f7;
+}
+
+#page1 h1 {
+  font-family: "Futura";
+  color: black;
+  text-align: center;
+  font-size: 15vw;
+  text-transform: uppercase;
+  line-height: 13vw;
+  letter-spacing: -8px;
+}
+
+#video-container {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 1vh;
+  position: relative;
+}
+
+#video-container #play {
+  position: fixed;
+  z-index: 9;
+  padding: 2.2vw 1.5vw;
+  background-color: black;
+  color: white;
+  font-family: futura;
+  font-size: 1vw;
+  text-transform: uppercase;
+  border-radius: 50%;
+  opacity: 0;
+  scale: 0;
+}
+
+#video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#divider {
+  align-content: center;
+  text-align: center;
+  margin-left: 2vw;
+  height: 1px;
+  width: 96vw;
+  background-color: black;
+  margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 82vw;
+}
+
+#divider .content {
+  font-family: futura;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+#page2 {
+  min-height: 50vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 2vw;
+  background-color: #f7f7f7;
+}
+
+#page2 .elem {
+  height: 100%;
+  width: 31%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  scale: 1.1;
+}
+
+.elem .dets img {
+  width: 10px;
+}
+
+.elem .dets {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 80%;
+  border-radius: 50px;
+  position: absolute;
+  background-color: rgb(255, 251, 251);
+  /* From https://css.glass */
+
+  background: rgba(255, 255, 255, 0.58);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.elem .dets p {
+  cursor: pointer;
+}
+
+#page3 {
+  min-height: 120vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 10rem;
+  padding-bottom: 25vh;
+  position: relative;
+  margin-top: 10vh;
+  margin-bottom: 20vh;
+}
+
+.child {
+  height: 55vh;
+  width: 44vw;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.child img {
+  width: 80%;
+}
+.child p {
+  cursor: pointer;
+}
+#divider2 {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 2vw;
+}
+
+#divider2 #left-box {
+  font-size: 6vh;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  #page1 {
+    min-height: 60vh;
+    padding: 0 2vw;
+    padding-top: 40vw;
+  }
+  #page1 h1 {
+    font-size: 15vw;
+    line-height: 13vw;
+    letter-spacing: 0px;
+  }
+
+  #video-container {
+    height: 25vh;
+    margin-top: 2vh;
+    padding-inline: 1vw;
+  }
+
+  #video-container #play {
+    position: absolute;
+    z-index: 9;
+    padding: 10vw 8vw;
+    font-size: 4.5vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    scale: 1;
+  }
+
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0vw 3vw;
+    margin-bottom: 10vh;
+  }
+
+  #page2 .elem {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -10vh;
+  }
+
+  #divider {
+    align-content: center;
+    text-align: center;
+    margin-left: 2vw;
+    height: 1px;
+    width: 94vw;
+    background-color: black;
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 60vw;
+    z-index: 10;
+  }
+
+  #divider .content {
+    font-family: futura;
+    font-weight: 100;
+    margin-top: 20px;
+    z-index: 10;
+  }
+
+  #divider2 #left-box {
+    padding: 0vh 2vw;
+    margin-top: 10vh;
+  }
+
+  #page3 {
+    min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .child {
+    height: 25vh;
+    width: 100vw;
+    z-index: 11;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+    margin-bottom: 0;
+  }
+
+  #links {
+    display: none;
+  }
+}
